@@ -26,3 +26,7 @@ ul {
     border: 5px solid #1b5583;
     padding: 30px;
 }
+
+a:hover {
+    color: pink;
+}
