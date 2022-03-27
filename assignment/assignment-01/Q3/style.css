@@ -1,0 +1,21 @@
+h3 {
+    text-align: center;
+}
+
+.list {
+    text-align: center;
+}
+
+.list1, .list2 {
+    display: inline-block; /* 여기에 설정을 해도 자식 태그까지 해당되지는 않음 */
+    margin: 10px;
+}
+
+.button {
+    display: inline-block; /* 따로 설정을 해주어야 적용 */
+    width: 80px;
+    padding: 8px;
+    border-radius: 15px;
+    color: white;
+    background-color: #0071e3;
+}
