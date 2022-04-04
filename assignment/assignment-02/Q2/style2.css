@@ -1,0 +1,120 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 800px;
+    height: 500px;
+    background-color: #383e42;
+}
+
+.layout-one{
+    display: flex;
+    justify-content: center;
+    flex-basis: 10%;
+}
+
+.one{
+    background-color: #6667ab;
+    margin: 5px;
+    border: 1px solid #fff;
+}
+
+.one1{
+    width: 20%;
+}
+
+.one2{
+    width: 80%;
+}
+
+.layout-two{
+    display: flex;
+    justify-content: center;
+    flex-basis: 10%;
+}
+
+.two{
+    background-color: #f1f0ec;
+    margin: 5px;
+    border: 1px solid #fff;
+    width: 33%;
+}
+
+.layout-three{
+    display: flex;
+    justify-content: center;
+    flex-basis: 20%;
+}
+
+.three{
+    background-color: #6667ab;
+    margin: 5px;
+    border: 1px solid #fff;
+}
+
+.three1{
+    width: 40%;
+}
+
+.three2{
+    width: 60%;
+}
+
+.layout-four{
+    display: flex;
+    justify-content: center;
+    flex-basis: 20%;
+}
+
+.four{
+    background-color: #f1f0ec;
+    margin: 5px;
+    border: 1px solid #fff;
+}
+
+.four1{
+    width: 60%;
+}
+
+.four2{
+    width: 40%;
+}
+
+.layout-five{
+    display: flex;
+    justify-content: center;
+    flex-basis: 40%;
+}
+
+.five{
+    background-color: #615c61;
+    margin: 5px;
+    border: 1px solid #fff;
+}
+
+.five1{
+    width: 40%;
+}
+
+.layout2-five{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 60%;
+}
+
+.five2{
+    width: 97%;
+    flex-basis: 100%;
+}
+
+.layout3-five{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-basis: 100%;
+}
+
+.five3, .five4{
+    width: 50%;
+}
