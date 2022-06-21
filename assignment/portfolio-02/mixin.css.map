@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAIQ,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EAgBhD,AAAA,GAAG,CAAC;IAEI,KAAK,EAAE,KAAK;GAQnB;;;AArBO,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK,OAAO,SAAS,EAAE,MAAM;EAWxE,AAAA,GAAG,CAAC;IAKI,KAAK,EAAE,KAAK;GAKnB;;;AAhBO,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,MAAM;EAMjD,AAAA,GAAG,CAAC;IAQI,KAAK,EAAE,KAAK;GAEnB",
+    "sources": [
+        "mixin.scss",
+        "variable.scss"
+    ],
+    "names": [],
+    "file": "mixin.css"
+}

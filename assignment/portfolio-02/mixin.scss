@@ -1,0 +1,31 @@
+@import 'variable.scss';
+
+@mixin rt($media) {
+    @if $media == mobile{
+        @media only screen and (max-width : $tablet) {
+            @content;
+        }
+    }
+    @else if $media == tablet{
+        @media only screen and (min-width : $tablet) and (max-width : $pc) {
+            @content;
+        }
+    }
+    @else if $media == pc{
+        @media only screen and (min-width : $pc){
+            @content;
+        }
+    }
+}
+
+img {
+    @include rt(mobile){
+        width: 210px;
+    }
+    @include rt(tablet){
+        width: 250px;
+    }
+    @include rt(pc){
+        width: 300px;
+    }
+}
