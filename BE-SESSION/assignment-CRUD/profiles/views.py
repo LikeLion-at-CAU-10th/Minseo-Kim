@@ -114,3 +114,65 @@ def get_profile(request, id):
                 'message': 'method error',
                 'data': None
             })
+
+def create_url(request, profile_id):
+    if request.method == "POST":
+        
+        body = request.POST
+
+        new_url = Url.objects.create(
+            profile = get_object_or_404(Profile, pk = profile_id),
+            title = body["title"],
+            link = body["link"]
+        )
+   
+        new_url_json={
+            "id" : new_url.id,
+            "title" : new_url.title,
+            "link" : new_url.link,
+            "is_completed" : new_url.is_completed,
+            "pup_date" : new_url.pup_date
+        }
+        
+        return JsonResponse({
+                'status': 200,
+                'success': True,
+                'message': 'url_success',
+                'data': new_url_json
+            })
+
+    return JsonResponse({
+                'status': 405,
+                'success': False,
+                'message': 'method error',
+                'data': None
+        })
+
+def get_url_all(request, profile_id):
+    if request.method == "GET":
+        profile_url = Url.objects.filter(profile = profile_id)
+        
+        profile_url_json=[]
+        for url in profile_url:
+            new_set={
+                "url_id" : url.id,
+                "title" : url.title,
+                "link" : url.link,
+                "is_completed" : url.is_completed,
+                "pup_date" : url.pup_date
+            }
+            profile_url_json.append(new_set)
+        
+        return JsonResponse({
+                'status': 200,
+                'success': True,
+                'message': 'url_all_success',
+                'data': profile_url_json
+            })
+
+    return JsonResponse({
+            'status': 405,
+            'success': False,
+            'message': 'method error',
+            'data': None
+        })
