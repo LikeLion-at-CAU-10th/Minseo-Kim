@@ -55,6 +55,9 @@ DJANGO_APPS = [
 
 PROJECT_APPS = [
     'todomates',        # python3 manage.py startapp todomates 후 앱추가 꼭 해주기!!
+    'posts',
+    'user',
+    'likelion',
 ]
 
 THIRD_PARTY_APPS = []

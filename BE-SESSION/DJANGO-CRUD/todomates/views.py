@@ -1,9 +1,13 @@
 from django.shortcuts import get_object_or_404
 from .models import *
 from django.http.response import JsonResponse
+#from django.core.serializers import register_serializer
+from django.views.decorators.http import require_http_methods
 import json
 
 # Create your views here.
+@require_http_methods(['POST', 'GET'])
+
 def create_category(request):
     # 생성 과정은 post 요청에만 일어나도록!
     if request.method == "POST":
@@ -37,12 +41,12 @@ def create_category(request):
             })
 
     # request.method에 대한 분기처리(post 가 아닌경우)
-    return JsonResponse({
-                'status': 405,
-                'success': False,
-                'message': 'method error',
-                'data': None
-        })
+    # return JsonResponse({
+    #             'status': 405,
+    #             'success': False,
+    #             'message': 'method error',
+    #             'data': None
+    #     })
 
 ## category 로 생성된 모든 데이터를 가져오는 함수
 def get_category_all(requests):
@@ -100,6 +104,7 @@ def get_category(request, id):
                 "color"     : category.color,
                 "pup_date"  : category.pup_date,
         }
+        #category_json = serialize(category)
         
         return JsonResponse({
                 'status': 200,

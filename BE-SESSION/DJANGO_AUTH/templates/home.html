@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load account socialaccount %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        {{ user.username }} 환영합니다!
+        {{ user.date_joined }}에 가입하셨네요.
+        <a href="{% url 'logout' %}">로그아웃</a>
+    {% else %}
+        <p>로그인이 필요합니다.</p>
+        <a href="{% url 'login' %}">로그인</a>
+        <a href="{% provider_login_url 'kakao' %}">카카오로 로그인</a>
+    {% endif %}
+{% endblock %}
